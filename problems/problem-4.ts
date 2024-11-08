@@ -28,9 +28,13 @@ type Rectangle = {
 }
 type Shape = Circle | Rectangle;
 
-const calculateShapeArea = (shape : Circle | Rectangle) =>{
-    // if(shape)
-    console.log(shape)
+const calculateShapeArea = (shape : Circle | Rectangle) : number =>{
+    if(shape.shape === 'circle'){
+        return Math.PI * shape.radius * shape.radius
+    }else if(shape.shape === 'rectangle'){
+        return shape.width * shape.height
+    }
+    return 0;
 }
 
 const circle : Circle = {
@@ -45,6 +49,9 @@ const rectangle : Rectangle = {
 
 
 const circleArea = calculateShapeArea(circle)
+console.log(circleArea, 'bi');
+const rectangleArea = calculateShapeArea(rectangle)
+console.log(rectangleArea, 'bi');
 
 // Sample Input 1:
 // const circleArea = calculateShapeArea({ shape: "circle", radius: 5 });
