@@ -21,7 +21,7 @@ class Car {
     }
     getCarAge(){
         let currentYear = 2024;//assuming current year is 2024
-        return currentYear -  this.year
+        return currentYear -  this.year;
     }
 }
 
