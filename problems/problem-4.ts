@@ -28,9 +28,23 @@ type Rectangle = {
 }
 type Shape = Circle | Rectangle;
 
-const calculateShapeArea = () =>{
-
+const calculateShapeArea = (shape : Circle | Rectangle) =>{
+    // if(shape)
+    console.log(shape)
 }
+
+const circle : Circle = {
+    shape: "circle",
+    radius: 10,
+}
+const rectangle : Rectangle = {
+    shape:"rectangle",
+    width: 20,
+    height: 20,
+}
+
+
+const circleArea = calculateShapeArea(circle)
 
 // Sample Input 1:
 // const circleArea = calculateShapeArea({ shape: "circle", radius: 5 });
