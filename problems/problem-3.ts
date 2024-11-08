@@ -4,28 +4,27 @@
 // the number of times the word appears in the sentence, ignoring case. Use the simple 
 // sentence without punctuation as input.
 
-const countWordOccurrences = (sentence: string, word: string) : string => {
+
+const countWordOccurrences = (sentence: string, word: string) : number => {
     let counts = 0;
     const toLowerCaseSentenceSplitBySpace = sentence.toLowerCase().split(' ');
-    const countWord = toLowerCaseSentenceSplitBySpace.filter((count, i )=> {
-        if(count === word){
-            return counts = counts + 1;
+    toLowerCaseSentenceSplitBySpace.filter(countWord => {
+        if(countWord === word.toLowerCase()){
+            counts = counts + 1;
         }
-        console.log(count, i)
     })
-    console.log(countWord, counts)
-    return `sentence: ${sentence} and word: ${word}`;
+    return counts;
 }
 
-const c = countWordOccurrences("I i i i love typescript", "i");
+const wordOccurrences = countWordOccurrences("i i i i i i i i i i i i I i i i i I i i i love typescript and TypeScript and Typescript and TYPESCRIPT", "typescript");
+console.log(wordOccurrences);
 
-// console.log(c)
-
-// Example:
 
 // Input: "I love typescript", "typescript"
 // Output: 1
+
 // Sample Input:
+// countWordOccurrences("I love typescript", "typescript");
 
 // Sample Output:
 // 1;
