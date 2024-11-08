@@ -7,7 +7,7 @@
 
 ## Problem 1 :
 ```ts
-<!-- Write a TypeScript function sumArray that takes an array of numbers and returns the sum of all elements in the array. -->
+// Write a TypeScript function sumArray that takes an array of numbers and returns the sum of all elements in the array.
 
     // Sample Input:
     sumArray([1, 2, 3, 4, 5]);
@@ -16,10 +16,10 @@
     15;
   ```
 
-## Answer:
+## Solution 1:
 ```ts
 type NumbersArray = number[];
-const sumArray = (numbers : NumbersArray ) : number=>{
+const sumArray = (numbers : NumbersArray ) : number => {
     if(numbers.length > 0){
         let total = 0;
         for(let i = 0; i <= numbers.length - 1 ; i++){
@@ -35,6 +35,38 @@ console.log(sum)
 
 // Sample Output:
 // 150;
+```
+
+--- 
+
+# Problem 2:
+```ts
+// Create a TypeScript function removeDuplicates that accepts an array of numbers and returns a new array with duplicates removed. Preserve the original order of elements.
+
+// Sample Input:
+removeDuplicates([1, 2, 2, 3, 4, 4, 5])
+
+// Sample Output:
+[1, 2, 3, 4, 5]
+
+```
+
+# Solution 2:
+```ts
+type NumbersArray2 = number[];
+
+const removeDuplicates = (numbers : NumbersArray2) : NumbersArray2 => {
+    return numbers.filter((num, i) => numbers.indexOf(num) === i);
+} 
+
+const uniqueArray = removeDuplicates([1, 2,4444, 55555,2222,2222,2222, 5]);
+console.log(uniqueArray);
+
+// Sample Input:
+// removeDuplicates([1, 2, 2, 3, 4, 4, 5])
+// Sample Output:
+// [1, 2, 3, 4, 5]
+
 ```
 
 
