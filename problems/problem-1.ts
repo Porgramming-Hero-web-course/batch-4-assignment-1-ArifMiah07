@@ -18,6 +18,5 @@ const sumArray = (numbers : NumbersArray ) : number=>{
 const sum = sumArray([10, 20, 30, 40, 50]);
 console.log(sum)
 
-// sumArray([1, 2, 3, 4, 5]);
 // Sample Output:
-// 15;
+// 150;
