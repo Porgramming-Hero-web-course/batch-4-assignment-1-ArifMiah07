@@ -6,11 +6,9 @@
 
 // todo: 
 // 1. --> Define an interface Profile with properties name, age, and email. ----> done ---<interface Profile {name: string;age: number;email: string;}>---
-// 2. --> Create a function updateProfile that accepts an object of type Profile ----> done ---<const updateProfile : Profile = () => {}>---
-// 1. --> ----> ---<type PartialProfile = Partial<Profile>>---
-// 1. --> ----> ---<>---
-// 1. --> ----> ---<>---
-// 1. --> ----> ---<>---
+// 2. --> Create a function updateProfile that accepts an object of type Profile ----> done ---<const updateProfile = (person : Profile) => {}>---
+// 3. --> and an object of type Partial representing the updates ----> done ---<type PartialProfile = Partial<Profile>>---
+// 4. --> The function should return the updated profile. ----> done ---< : Profile => {return {...profile, ...updates}}>---
 // 1. --> ----> ---<>---
 
 interface Profile {
@@ -21,11 +19,9 @@ interface Profile {
 // Partial---> optional
 type PartialProfile = Partial<Profile>
 
-const updateProfile = (profile : Profile , update: PartialProfile) => {
-    return {profile, update}
+const updateProfile = (profile : Profile , updates: PartialProfile) : Profile => {
+    return {...profile, ...updates};
 }
-
-
 
 
 // Sample Input :
